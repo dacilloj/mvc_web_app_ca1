@@ -18,7 +18,7 @@ namespace mvc_web_app_ca1.Models
 
         [Required]
         [Range(0,100)]
-        public double Weight { get; set; }
+        public double? Weight { get; set; }
 
         [Required]
         [Range(0,200)]
