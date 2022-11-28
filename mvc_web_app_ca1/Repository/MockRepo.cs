@@ -11,5 +11,10 @@ namespace mvc_web_app_ca1.Repository
         {
             return Packages;
         }
+
+        public void CreatePackage(PackageModel m)
+        {
+            Packages.Add(m);
+        }
     }
 }

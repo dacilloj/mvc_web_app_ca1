@@ -6,15 +6,15 @@ namespace mvc_web_app_ca1.Models
     public class PackageModel
     {
         [Required]
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
         [Required]
         [StringLength(60)]
-        public string ClientName { get; set; }
+        public string ClientName { get; set; } = string.Empty;
 
         [Required]
         [StringLength(200, MinimumLength =6)]
-        public string Address { get; set; }
+        public string Address { get; set; } = String.Empty;
 
         [Required]
         [Range(0,100)]
@@ -22,9 +22,9 @@ namespace mvc_web_app_ca1.Models
 
         [Required]
         [Range(0,200)]
-        public double Lenght { get; set; }
+        public double? Lenght { get; set; }
         [Required]
-        public double Height { get; set; }
+        public double? Height { get; set; }
 
     }
 }

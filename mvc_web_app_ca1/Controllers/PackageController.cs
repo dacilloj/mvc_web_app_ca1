@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using mvc_web_app_ca1.Models;
 using mvc_web_app_ca1.Repository;
 
 namespace mvc_web_app_ca1.Controllers
@@ -36,11 +37,18 @@ namespace mvc_web_app_ca1.Controllers
         // POST: PackageController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(PackageModel p)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _repo.CreatePackage(p);
+                    return RedirectToAction(nameof(Index));
+
+                }
+                return View();
+
             }
             catch
             {
