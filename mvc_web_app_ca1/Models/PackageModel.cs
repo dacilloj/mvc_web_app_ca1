@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace mvc_web_app_ca1.Models
 {
@@ -20,18 +21,20 @@ namespace mvc_web_app_ca1.Models
         public string Address { get; set; } = String.Empty;
 
         [Display(Name = "Weight (kg)")]
-        [Required]
         [Range(0,100)]
-        public double? Weight { get; set; }
+        public double Weight { get; set; }
 
         [Display(Name = "Lenght (cm)")]
-        [Required]
+
         [Range(0,200)]
-        public double? Lenght { get; set; }
+        public double Lenght { get; set; }
 
         [Display(Name = "Height (cm)")]
+        public double Height { get; set; }
+
+        Display(Name = "Width (cm)")]
         [Required]
-        public double? Height { get; set; }
+        public double Width { get; set; }
 
     }
 }
