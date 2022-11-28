@@ -5,11 +5,11 @@ namespace mvc_web_app_ca1.Repository
     public class MockRepo : IMockRepo
     {
         //add private repo
-        //private static List<PackageModel> = new List<PackageModel>();
+        private static List<PackageModel> Packages = new List<PackageModel>();
 
-        public List<PackageModel> PackageStats()
+        public List<PackageModel> GetPackages()
         {
-            throw new NotImplementedException();
+            return Packages;
         }
     }
 }
