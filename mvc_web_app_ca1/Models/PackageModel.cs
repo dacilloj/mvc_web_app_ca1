@@ -32,8 +32,7 @@ namespace mvc_web_app_ca1.Models
         [Display(Name = "Height (cm)")]
         public double Height { get; set; }
 
-        Display(Name = "Width (cm)")]
-        [Required]
+        [Display(Name = "Width (cm)")]
         public double Width { get; set; }
 
     }
