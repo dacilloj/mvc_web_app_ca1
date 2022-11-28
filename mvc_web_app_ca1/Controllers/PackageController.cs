@@ -59,7 +59,8 @@ namespace mvc_web_app_ca1.Controllers
         // GET: PackageController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var package = _repo.GetPackage();
+            return View(package);
         }
 
         // POST: PackageController/Edit/5
