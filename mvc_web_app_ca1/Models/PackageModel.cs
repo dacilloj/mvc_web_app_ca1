@@ -7,9 +7,9 @@ namespace mvc_web_app_ca1.Models
     {
         [Required]
         public int Id { get; set; }
+
         [Required]
         [StringLength(60)]
-       
         public string ClientName { get; set; }
 
         [Required]
