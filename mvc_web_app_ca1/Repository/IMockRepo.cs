@@ -6,5 +6,9 @@ namespace mvc_web_app_ca1.Repository
     {
         List<PackageModel> GetPackages();
         void CreatePackage(PackageModel m);
+
+        PackageModel GetPackage(int id);
+
+        void EditPackage(PackageModel m);
     }
 }

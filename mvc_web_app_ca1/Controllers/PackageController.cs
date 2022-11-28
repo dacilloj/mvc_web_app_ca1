@@ -59,17 +59,18 @@ namespace mvc_web_app_ca1.Controllers
         // GET: PackageController/Edit/5
         public ActionResult Edit(int id)
         {
-            var package = _repo.GetPackage();
+            var package = _repo.GetPackage(id);
             return View(package);
         }
 
         // POST: PackageController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(PackageModel m)
         {
             try
             {
+                _repo.EditPackage(m);
                 return RedirectToAction(nameof(Index));
             }
             catch
