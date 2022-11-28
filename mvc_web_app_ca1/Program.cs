@@ -1,3 +1,5 @@
+using mvc_web_app_ca1.Repository;
+
 namespace mvc_web_app_ca1
 {
     public class Program
@@ -8,6 +10,9 @@ namespace mvc_web_app_ca1
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            //add controllers
+            builder.Services.AddScoped<IMockRepo, MockRepo>();
 
             var app = builder.Build();
 
