@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace mvc_web_app_ca1.Models
 {
@@ -8,6 +9,7 @@ namespace mvc_web_app_ca1.Models
         public int Id { get; set; }
         [Required]
         [StringLength(60)]
+       
         public string ClientName { get; set; }
 
         [Required]
