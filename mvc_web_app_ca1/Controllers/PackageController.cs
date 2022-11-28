@@ -1,14 +1,24 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using mvc_web_app_ca1.Repository;
 
 namespace mvc_web_app_ca1.Controllers
 {
     public class PackageController : Controller
     {
+        IMockRepo _repo;
+
+        public PackageController(IMockRepo repo)
+        {
+            _repo = repo;
+        }
+
+
         // GET: PackageController
         public ActionResult Index()
         {
-            return View();
+            var packages = _repo.GetPackages(); 
+            return View(packages);
         }
 
         // GET: PackageController/Details/5
